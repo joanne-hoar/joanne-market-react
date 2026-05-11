@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import Header from './common/Header'
 import './App.css'
 
 function App() {
@@ -9,13 +7,14 @@ function App() {
 
   return (
     <>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+      <Header title={'Joanne\'s Market'} />
+      <button
+      type="button"
+      className="counter"
+      onClick={() => setCount((count) => count + 1)}
+    >
+      Count is {count}
+    </button>
     </>
   )
 }
