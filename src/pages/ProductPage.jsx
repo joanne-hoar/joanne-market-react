@@ -9,11 +9,15 @@ function ProductPage(){
   {id: 1003, name: 'Rabbit', price: 150, description: 'A gentle pet with quiet charm, long ears, and a love for cozy spaces.', imageUrl: '/products/rabbit.png'},
  ];
 
+ function displaySelected(product){
+    alert(product.name);
+ }
+
 return(
     <div className="product-grid">
     {
         allProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} onAction={displaySelected}/>
         ))
     }
     </div>

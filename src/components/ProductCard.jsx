@@ -1,8 +1,13 @@
 import './ProductCard.css';
 
-function ProductCard({product}){
+function ProductCard({product, onAction}){ 
+    
+    function onSelect(){
+        onAction(product);
+    }
+
     return (
-<button type="button" className="product-card">
+<button type="button" className="product-card" onClick={onSelect}>
 	<h3>{ product.name }</h3>
 	<h4>${ product.price }</h4>
 </button>
