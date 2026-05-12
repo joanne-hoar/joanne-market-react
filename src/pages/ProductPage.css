@@ -1,0 +1,24 @@
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.selected-product {
+	padding: 1rem 1.25rem;
+	border: 1px solid rgba(41, 19, 211, 0.2);
+	border-radius: 1rem;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.selected-product h2,
+.selected-product p {
+	margin: 0;
+}
+
+.selected-product p {
+	margin-top: 0.5rem;
+	line-height: 1.5;
+}
