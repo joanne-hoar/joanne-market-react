@@ -7,6 +7,8 @@ function ProductPage(){
     //const allProducts = ProductService.getAllProducts();
     const [allProducts, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [selectedId, setSelectedId] = useState(null);    
+    const selectedProduct = ProductService.getProductById(selectedId);
 
     useEffect(() => {
         ProductService.getAllProducts()
@@ -17,7 +19,8 @@ function ProductPage(){
     }, []); // Empty dependency array - run once on mount
 
     function displaySelected(product){
-        alert(product.name);
+        //alert(product.name);
+        setSelectedId(product.id);
     }
 
     if(loading){
@@ -28,7 +31,7 @@ function ProductPage(){
         <div className="product-grid">
         {
             allProducts.map(product => (
-                <ProductCard key={product.id} product={product} onAction={displaySelected}/>
+                <ProductCard key={product.id} product={product} onAction={displaySelected} isSelected={product.id === selectedId}/>
             ))
         }
         </div>

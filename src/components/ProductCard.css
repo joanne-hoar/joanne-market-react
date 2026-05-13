@@ -14,7 +14,7 @@
 	transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 
-.product-card--selected {
+.product-card.selected {
 	border-color: #2913d3;
 	box-shadow: 0 0 0 2px rgba(41, 19, 211, 0.18), 0 14px 28px rgba(0, 0, 0, 0.12);
 	transform: translateY(-2px);
