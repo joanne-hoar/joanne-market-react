@@ -6,7 +6,13 @@ const allProducts = [
 
  class ProductService{
     getAllProducts(){
-        return allProducts;    
+        // code to simulate 2-second delay (return promise)
+        return new Promise(resolve => {
+            setTimeout(() => resolve(allProducts), 2000);
+        })
+        
+        // code to return allProducts
+        //return allProducts;    
     }
 
     getProductById(id){
